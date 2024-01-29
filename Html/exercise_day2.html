@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            td, th{
+                border: 1px solid black;
+            }
+            table{
+                width: 100%;
+                border-collapse:collapse;
+            }
+            .colSecond {
+                width: 20%;
+                background-color: yellow;
+            }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>테이블의 제목</caption>
+        <colgroup>
+            <col>
+            <col class="colSecond">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <!-- th 요소는 가운데 정렬됨 -->
+                <th>월요일</th>
+                <th>화요일</th>
+                <th>수요일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">짜장면</td>
+                <td rowspan="2">피자</td>
+            </tr>
+            <tr>
+                <td>육계장</td>
+                <td>라면</td>
+                <!-- <td>짜장면</td> -->
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>맛있다.</td>
+                <td>맛없다.</td>
+                <td>보통이다.</td>
+            </tr>       
+        </tfoot>   
+    </table>
+    <br><br><br>
+    <!-- form 태그에서 action 속성은 잘 안쓰게 되고 있다. html 파일을 통채로 보내거나 받지 않고,
+        데이터를 전송하고 받는다. ajax 등을 통해서 부분적으로만 사용되고 있다고 한다.
+    -->
+    <form>
+        <fieldset>
+            <legend>HTML 스터디 망해가는 이유는?</legend>
+            <label>
+                노잼이다
+                <input type="radio" name="reasome">
+            </label>
+            <label for="myid">너무 어렵다</label>
+            <input id="myid" type="radio" name="reasome">            
+            <label>
+                주말에 뭐하는 짓이냐
+                <input type="radio" name="reasome">
+            </label>
+            <br>
+            <label for="another">만약 다른 스터디를 하고 싶다면?</label>
+            <br>
+            <select name="lang">
+                <option value="javascript">자바스크립트</option>
+                <option value="python">파이썬</option>
+                <option value="java">자바</option>
+            </select>
+            <br>    
+            <label for="lastWord">마지막으로 하고 싶은 말</label>
+            <br>
+            <textarea name="lastWord" id="lastWord" cols="30" rows="2"></textarea>
+            <br>
+            <button type="submit">전송하기</button>
+            <button type="reset">다시 작성하기</button>
+          </fieldset>
+    </form>
+</body>
+</html>
