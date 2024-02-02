@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .item {
+            /*text-align: center;
+            line-height: 50px;*/
+
+            /* item에서 flex 선언을 하면 이 안에서 주축과 교차축에 center를 주면 된다. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width : 50px;
+            height : 50px;
+            background-color: royalblue;
+            color: white;
+        }
+
+        .container {
+            display: flex;   
+            justify-content: flex-end;     
+            align-items: center;  
+            width: 600px;
+            height: 600px;
+            background-color: gray        
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>    
+    </div>    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        body a {
+            display: inline-block;
+            color: blue;
+        }
+
+        a[href] {
+            color: green;
+        }
+
+        p::before {
+            content: 'hello';
+        }
+        
+        p::after {
+            display: inline-block;
+            content: 'world';
+        }
+        .test{
+            /*
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            */
+            padding: 10px 10px 10px 10px;
+            padding: 10px 10px 10px;
+            padding: 10px 30px;
+            padding: 10px;
+
+            background-color: royalblue;
+        }
+        .parent{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="test">hello</div>
+    </div>
+    <p>
+        <strong>Lorem </strong>
+        ipsum dolor sit amet consectetur adipisicing elit. <br>
+        Voluptas necessitatibus fuga amet? Dignissimos sequi at accusantium, <br>
+        itaque corporis ea consequatur quo doloremque. Consequatur maiores error aut aliquid provident iusto eaque.
+    </p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <a class="한번도선택한적없는클래스" href="http://www.netflix.com">hello this is link</a>
+    <input type="text">
+    <div id="myDiv">
+        <p class="myP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas expedita adipisci <br>
+            pariatur eum aliquam nisi ad, incidunt dicta in nostrum quidem deleniti dolor, <br>
+            facilis rem quo aperiam? Iste, nobis assumenda.</p>
+    </div>
+    <div id="myDiv">
+        <p class="myPMore">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas expedita adipisci <br>
+            pariatur eum aliquam nisi ad, incidunt dicta in nostrum quidem deleniti dolor, <br>
+            facilis rem quo aperiam? Iste, nobis assumenda.</p>
+    </div>
+</body>
+</html>
