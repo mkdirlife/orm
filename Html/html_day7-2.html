@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function Husband(name, credit){
+            this.name = name;
+            this.credit = credit;
+            this.wash = function (wife){
+                if(wife.credit < 0) {
+                    console.log(`${this.name}이 빨래를 안 한다`);   
+                    wife.angryCount++ 
+                }
+                else
+                {
+                    console.log(`${this.name}이 빨래를 한다`);
+                    wife.allDown();
+                    this.credit++;
+                };
+            };
+
+            this.dish_wash = function(wife) {
+                if(wife.credit < 0) {
+                    console.log(`${this.name}이 설겆이를 안 한다`);   
+                    wife.angryCount++ 
+                }
+                else
+                {
+                    console.log(`${this.name}이 설겆이를 한다`);
+                    wife.allDown();
+                    this.credit++;
+                };            
+            };      
+        }
+
+        function Wife(name, credit, angryCount){
+            this.name = name;
+            this.credit = credit;
+            this.angryCount = angryCount;
+
+            this.allDown = function(){
+                this.credit--;
+                this.angryCount--;
+            }
+        };
+
+        const me = new Husband("전지용", 100000);
+        const wife = new Wife("와이프", 3000000, 50);
+
+        me.wash(wife);
+        Husband.prototype.name = "전지용맞아?";
+        Husband.prototype.dish_wash = function (wife) {
+            wife.allDown()
+        };
+
+    </script>    
+</body>
+</html>
