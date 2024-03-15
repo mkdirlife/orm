@@ -1,0 +1,3 @@
+<P>hello blog</p>
+<P>{{data.title}}</p>
+<P>{{data.text}}</p>
